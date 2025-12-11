@@ -28,6 +28,9 @@ document.addEventListener('DOMContentLoaded', function() {
   const backToChoice2 = document.getElementById('backToChoice2');
   const dashboardScreen = document.getElementById('dashboardScreen');
   const logoutButton = document.getElementById('logoutButton');
+  const headerLogout = document.getElementById('headerLogout');
+  const appHeader = document.getElementById('appHeader');
+  const mainContent = document.getElementById('mainContent');
   const logoutModal = document.getElementById('logoutModal');
   const confirmLogout = document.getElementById('confirmLogout');
   const cancelLogout = document.getElementById('cancelLogout');
@@ -89,9 +92,17 @@ document.addEventListener('DOMContentLoaded', function() {
   // 6. DASHBOARD -> MODAL DE CONFIRMACIÓN
   // ===========================================
   
-  logoutButton.addEventListener('click', function() {
-    logoutModal.style.display = 'flex';
-  });
+  if (logoutButton) {
+    logoutButton.addEventListener('click', function() {
+      logoutModal.style.display = 'flex';
+    });
+  }
+
+  if (headerLogout) {
+    headerLogout.addEventListener('click', function() {
+      logoutModal.style.display = 'flex';
+    });
+  }
   
   
   // ===========================================
@@ -100,7 +111,11 @@ document.addEventListener('DOMContentLoaded', function() {
   
   confirmLogout.addEventListener('click', function() {
     logoutModal.style.display = 'none';
-    dashboardScreen.style.display = 'none';
+    // Ocultar vistas de usuario
+    if (dashboardScreen) dashboardScreen.style.display = 'none';
+    if (appHeader) appHeader.style.display = 'none';
+    if (mainContent) mainContent.style.display = 'none';
+    // Volver a la bienvenida
     welcomeScreen.style.display = 'flex';
   });
   

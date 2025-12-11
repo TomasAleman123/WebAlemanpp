@@ -61,16 +61,23 @@ document.addEventListener('DOMContentLoaded', function() {
     // ===========================================
     
     if (usuarioEncontrado) {
-      // Login exitoso
-      alert('¡Bienvenido ' + usuarioEncontrado.username + '! Login exitoso.');
-      
+      // Login exitoso: colocar mensaje en el header y mostrar main en blanco
+      const appHeader = document.getElementById('appHeader');
+      const headerWelcome = document.getElementById('headerWelcome');
+      const mainContent = document.getElementById('mainContent');
+
+      if (headerWelcome) {
+        headerWelcome.textContent = '¡Bienvenido ' + usuarioEncontrado.username + '!';
+      }
+
       // Limpiamos el formulario
       loginForm.reset();
-      
-      // Ocultamos la pantalla de login y mostramos el dashboard
+
+      // Ocultamos pantalla de login y mostramos header + main
       loginScreen.style.display = 'none';
-      dashboardScreen.style.display = 'flex';
-      
+      if (appHeader) appHeader.style.display = 'flex';
+      if (mainContent) mainContent.style.display = 'block';
+
     } else {
       // Usuario o contraseña incorrectos
       alert('Email/Usuario o contraseña incorrectos. Intenta de nuevo.');

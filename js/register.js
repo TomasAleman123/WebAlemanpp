@@ -107,15 +107,22 @@ document.addEventListener('DOMContentLoaded', function() {
     // Guardamos los usuarios en localStorage
     guardarUsuarios(usuarios);
     
-    // Mostramos un mensaje de éxito
-    alert('¡Registro exitoso! Ahora puedes iniciar sesión');
-    
+    // Mostramos un mensaje de éxito (y pasamos al header + main)
+    const appHeader = document.getElementById('appHeader');
+    const headerWelcome = document.getElementById('headerWelcome');
+    const mainContent = document.getElementById('mainContent');
+
+    if (headerWelcome) {
+      headerWelcome.textContent = '¡Bienvenido ' + username + '!';
+    }
+
     // Limpiamos el formulario
     registerForm.reset();
-    
-    // Ocultamos la pantalla de registro y mostramos el dashboard
+
+    // Ocultamos la pantalla de registro y mostramos header + main
     registerScreen.style.display = 'none';
-    dashboardScreen.style.display = 'flex';
+    if (appHeader) appHeader.style.display = 'flex';
+    if (mainContent) mainContent.style.display = 'block';
   });
   
 });
