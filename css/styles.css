@@ -1,30 +1,14 @@
-/*
-  ====================================
-  WEB ALEMANPP - ESTILOS CSS
-  ====================================
-  Este archivo contiene todos los estilos visuales
-  para la página de login. Cada regla está explicada.
-*/
-
-/* ===========================================
-   0. ESTILOS DEL LOGO
-   =========================================== */
-
-/*
-  .welcome-logo: Estilos para el logo SVG "TA" con computadora.
-*/
-
 .welcome-logo {
   /*
-    width: 150px;
-    height: 150px;
+    width: 180px;
+    height: 180px;
     
     ¿Qué hace?
     - Define el tamaño del logo SVG.
-    - 150x150 píxeles para que sea visible y prominent.
+    - 180x180 píxeles para que sea visible y prominent.
   */
-  width: 150px;
-  height: 150px;
+  width: 180px;
+  height: 180px;
   
   /*
     margin-bottom: 30px;
@@ -245,12 +229,12 @@ body {
   border-radius: 12px;
   
   /*
-    padding: 60px 40px;
+    padding: 70px 50px;
     
     ¿Qué hace?
-    - Espacio interior: 60px arriba/abajo, 40px izquierda/derecha.
+    - Espacio interior: 70px arriba/abajo, 50px izquierda/derecha.
   */
-  padding: 60px 40px;
+  padding: 70px 50px;
   
   /*
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
@@ -261,14 +245,14 @@ body {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   
   /*
-    width: 500px;
+    width: 650px;
     max-width: 90%;
     
     ¿Qué hace?
-    - Ancho del contenedor: 500px en pantallas grandes.
+    - Ancho del contenedor: 650px en pantallas grandes.
     - max-width: 90% para que sea responsive en móviles.
   */
-  width: 500px;
+  width: 650px;
   max-width: 90%;
   
   /*
@@ -342,12 +326,12 @@ body {
 
 .welcome-title {
   /*
-    font-size: 56px;
+    font-size: 68px;
     
     ¿Qué hace?
     - Tamaño muy grande para destacar.
   */
-  font-size: 56px;
+  font-size: 68px;
   
   /*
     color: #333;
@@ -869,7 +853,7 @@ body {
     - Define el color de fondo del contenedor.
     - white: Color blanco (el cubo/caja principal).
   */
-  background-color: white;
+  background-color: white !important;
   
   /*
     padding: 40px;
@@ -911,7 +895,7 @@ body {
     ¿Qué hace?
     - Agrega un borde naranja alrededor del contenedor.
   */
-  border: 3px solid #FF8C00;
+  border: 3px solid #FF8C00 !important;
   
   /*
     width: 300px;
@@ -1118,553 +1102,4 @@ input {
    =========================================== */
 
 /*
-  input:focus: Se aplica cuando el usuario hace clic en un input.
-  :focus es un "pseudo-selector" (estado especial del elemento).
-*/
-
-input:focus {
-  /*
-    outline: none;
-    
-    ¿Qué hace?
-    - Elimina el contorno azul que aparece por defecto.
-    - Navegadores agregan outline azul para accesibilidad.
-    - Aquí lo quitamos para un diseño personalizado.
-  */
-  outline: none;
-  
-  /*
-    border-color: #666666;
-    
-    ¿Qué hace?
-    - Cambia el color del borde a gris oscuro cuando está activo.
-    - #666666: Gris oscuro.
-    - Indica visualmente que el campo está enfocado.
-  */
-  border-color: #666666;
-  
-  /*
-    background-color: #f9f9f9;
-    
-    ¿Qué hace?
-    - Cambia el fondo a gris muy claro.
-    - Proporciona retroalimentación visual al usuario.
-  */
-  background-color: #f9f9f9;
-}
-
-
-/* ===========================================
-   9. ESTILOS DEL BOTÓN (BUTTON)
-   =========================================== */
-
-/*
-  button: Estilos para el botón "Iniciar Sesión".
-*/
-
-button {
-  /*
-    width: 100%;
-    
-    ¿Qué hace?
-    - El botón ocupa el 100% del ancho disponible.
-  */
-  width: 100%;
-  
-  /*
-    padding: 10px;
-    
-    ¿Qué hace?
-    - Agrega espacio interior al botón.
-    - Hace que sea más grande y fácil de hacer clic.
-  */
-  padding: 10px;
-  
-  /*
-    background-color: #666666;
-    
-    ¿Qué hace?
-    - Color de fondo del botón.
-    - #666666: Gris oscuro para el botón.
-  */
-  background-color: #666666;
-  
-  /*
-    color: white;
-    
-    ¿Qué hace?
-    - Color del texto del botón.
-    - white: Contrasta bien con el verde de fondo.
-  */
-  color: white;
-  
-  /*
-    border: none;
-    
-    ¿Qué hace?
-    - Elimina el borde del botón.
-    - Los botones por defecto tienen borde.
-  */
-  border: none;
-  
-  /*
-    border-radius: 4px;
-    
-    ¿Qué hace?
-    - Redondea las esquinas del botón.
-  */
-  border-radius: 4px;
-  
-  /*
-    font-size: 16px;
-    
-    ¿Qué hace?
-    - Tamaño del texto del botón.
-    - 16px: Grande y legible.
-  */
-  font-size: 16px;
-  
-  /*
-    font-weight: bold;
-    
-    ¿Qué hace?
-    - Hace el texto del botón más grueso.
-    - Destaca el texto.
-  */
-  font-weight: bold;
-  
-  /*
-    cursor: pointer;
-    
-    ¿Qué hace?
-    - Cambia el cursor a una manita cuando pasa sobre el botón.
-    - Indica que el botón es clickeable.
-  */
-  cursor: pointer;
-  
-  /*
-    margin-top: 10px;
-    
-    ¿Qué hace?
-    - Agrega espacio sobre el botón.
-    - Lo separa del campo de contraseña.
-  */
-  margin-top: 10px;
-}
-
-
-/* ===========================================
-   10. ESTILOS DEL BOTÓN CUANDO PASAS SOBRE ÉL (HOVER)
-   =========================================== */
-
-/*
-  button:hover: Se aplica cuando el usuario pasa el mouse sobre el botón.
-  :hover es un "pseudo-selector" (estado especial del elemento).
-*/
-
-button:hover {
-  /*
-    background-color: #555555;
-    
-    ¿Qué hace?
-    - Cambia el color a un gris más oscuro.
-    - Proporciona retroalimentación visual.
-    - Indica que el botón es interactivo.
-  */
-  background-color: #555555;
-}
-
-
-/* ===========================================
-   11. ESTILOS DEL CONTENEDOR DE ENLACES
-   =========================================== */
-
-/*
-  .link-container: Contiene los enlaces de "Regístrate" y "Olvidaste contraseña".
-*/
-
-.link-container {
-  /*
-    text-align: center;
-    
-    ¿Qué hace?
-    - Centra el texto horizontalmente.
-  */
-  text-align: center;
-  
-  /*
-    margin-top: 20px;
-    
-    ¿Qué hace?
-    - Agrega espacio sobre los enlaces.
-    - Los separa del botón de login.
-  */
-  margin-top: 20px;
-}
-
-
-/* ===========================================
-   12. ESTILOS DE LOS ENLACES (A)
-   =========================================== */
-
-/*
-  a: Estilos para los hipervínculos.
-*/
-
-a {
-  /*
-    color: #666666;
-    
-    ¿Qué hace?
-    - Color del texto del enlace.
-    - #666666: Gris oscuro para consistencia visual.
-  */
-  color: #666666;
-  
-  /*
-    text-decoration: none;
-    
-    ¿Qué hace?
-    - Elimina el subrayado por defecto de los enlaces.
-    - Los enlaces se ven más limpios.
-  */
-  text-decoration: none;
-  
-  /*
-    font-size: 14px;
-    
-    ¿Qué hace?
-    - Tamaño del texto de los enlaces.
-    - 14px: Más pequeño que el texto principal.
-  */
-  font-size: 14px;
-}
-
-/* Header y main para la aplicación (visibles tras login) */
-.app-header {
-  width: 100%;
-  background-color: white;
-  border-bottom: 6px solid #FF8C00;
-  padding: 8px 24px;
-  display: none; /* mostrado por JS */
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: auto;
-  z-index: 1000;
-  justify-content: flex-end;
-}
-.header-logout-button { padding: 8px 16px; font-size: 14px; white-space: nowrap; }
-.main-content {
-  display: none; /* mostrado por JS tras login/registro */
-  background-color: #808080; /* fondo gris */
-  border: none; /* sin borde */
-  min-height: calc(100vh - 60px);
-  padding: 40px;
-  margin-top: 60px; /* dejar espacio para el header fijo */
-}
-
-
-/* ===========================================
-   13. ESTILOS DE LOS ENLACES CUANDO PASAS SOBRE ELLOS (HOVER)
-   =========================================== */
-
-/*
-  a:hover: Se aplica cuando el usuario pasa el mouse sobre un enlace.
-*/
-
-a:hover {
-  /*
-    text-decoration: underline;
-    
-    ¿Qué hace?
-    - Agrega un subrayado cuando pasas sobre el enlace.
-    - Indica que es un enlace interactivo.
-  */
-  text-decoration: underline;
-}
-
-/*
-  ====================================
-  RESUMEN DE CONCEPTOS CSS USADOS
-  ====================================
-  
-  1. Selectores:
-     - *: Selector universal (todos los elementos)
-     - body, h1, label, input, button, a: Selectores de elemento
-     - .login-container, .form-group: Selectores de clase (.)
-     - :focus, :hover: Pseudo-selectores (estados especiales)
-  
-  2. Propiedades comunes:
-     - color: Color del texto
-     - background-color: Color de fondo
-     - padding: Espacio interior
-     - margin: Espacio exterior
-     - border: Borde del elemento
-     - width: Ancho
-     - font-size: Tamaño de letra
-     - display: Tipo de visualización (flex)
-  
-  3. Unidades:
-     - px: Píxeles (unidad fija)
-     - vh: Viewport Height (altura de pantalla)
-     - rgb, rgba: Formato de color (rojo, verde, azul, alfa)
-     - hex (#RRGGBB): Color hexadecimal
-  
-  4. Conceptos:
-     - Flexbox: Sistema de alineación flexible
-     - Media queries: No usadas aquí, pero útiles para responsive
-     - Pseudo-selectores: :hover, :focus para estados especiales
-*/
-
-
-/* ===========================================
-   PANTALLA DE DASHBOARD (BIENVENIDA DESPUÉS DE LOGIN)
-   =========================================== */
-
-/*
-  .dashboard-container: Contenedor principal de la pantalla de bienvenida.
-*/
-
-.dashboard-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background-color: #808080;
-  position: relative;
-  /* 
-    display: flex: Activa Flexbox.
-    flex-direction: column: Elementos apilados verticalmente.
-    justify-content: center: Centra verticalmente.
-    align-items: center: Centra horizontalmente.
-    min-height: 100vh: Ocupa toda la pantalla.
-    background-color: #808080: Fondo gris oscuro.
-    position: relative: Necesario para posicionar el botón de logout en las esquinas.
-  */
-}
-
-/*
-  .logout-button: Botón para cerrar sesión en la esquina superior derecha.
-*/
-
-.logout-button {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  background-color: white;
-  color: #333;
-  border: 2px solid #333;
-  padding: 10px 20px;
-  border-radius: 6px;
-  font-size: 14px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  /* 
-    position: absolute: Posicionamiento fijo en la esquina.
-    top: 20px: 20 píxeles desde el top.
-    right: 20px: 20 píxeles desde la derecha.
-    background-color: white: Fondo blanco.
-    color: #333: Texto gris oscuro.
-    border: 2px solid #333: Borde gris oscuro.
-    padding: 10px 20px: Espacio interno.
-    border-radius: 6px: Esquinas redondeadas.
-    font-size: 14px: Texto pequeño.
-    font-weight: bold: Texto en negrita.
-    cursor: pointer: Cursor de mano.
-    transition: all 0.3s ease: Animación al hover.
-  */
-}
-
-/*
-  .logout-button:hover: Estilos del botón al pasar mouse.
-*/
-
-.logout-button:hover {
-  background-color: #f0f0f0;
-  /* 
-    background-color: #f0f0f0: Gris muy claro.
-  */
-}
-
-/*
-  .welcome-message: Estilos para "¡Bienvenido!"
-*/
-
-.welcome-message {
-  font-size: 4em;
-  color: white;
-  margin-bottom: 20px;
-  font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  /* 
-    font-size: 4em: Muy grande (4 veces el tamaño base).
-    color: white: Texto blanco.
-    margin-bottom: 20px: Espacio debajo.
-    font-weight: bold: Texto en negrita.
-    text-transform: uppercase: Todo en mayúsculas.
-    letter-spacing: 2px: Espacio entre letras.
-  */
-}
-
-
-/* ===========================================
-   MODAL DE CONFIRMACIÓN DE CERRAR SESIÓN
-   =========================================== */
-
-/*
-  .logout-modal: Fondo oscuro detrás del modal (overlay).
-*/
-
-.logout-modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 999;
-  /* 
-    position: fixed: Se queda en el lugar aunque se scrollee.
-    top: 0, left: 0, width: 100%, height: 100%: Ocupa toda la pantalla.
-    background-color: rgba(0, 0, 0, 0.5): Fondo negro semi-transparente.
-    display: flex: Centra el contenido.
-    z-index: 999: Se pone encima de todo.
-  */
-}
-
-/*
-  .logout-modal-content: El cuadro blanco con el mensaje y botones.
-*/
-
-.logout-modal-content {
-  background-color: white;
-  padding: 40px;
-  border-radius: 12px;
-  text-align: center;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-  width: 400px;
-  max-width: 90%;
-  /* 
-    background-color: white: Fondo blanco.
-    padding: 40px: Espacio interior.
-    border-radius: 12px: Esquinas redondeadas.
-    text-align: center: Texto centrado.
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3): Sombra fuerte.
-    width: 400px: Ancho fijo.
-    max-width: 90%: Responsive en móviles.
-  */
-}
-
-/*
-  h2 en el modal: Pregunta de confirmación.
-*/
-
-.logout-modal-content h2 {
-  color: #333;
-  font-size: 24px;
-  margin-bottom: 30px;
-  /* 
-    color: #333: Texto gris oscuro.
-    font-size: 24px: Tamaño grande.
-    margin-bottom: 30px: Espacio debajo.
-  */
-}
-
-/*
-  .logout-modal-buttons: Contenedor para los botones sí y no.
-*/
-
-.logout-modal-buttons {
-  display: flex;
-  gap: 15px;
-  justify-content: center;
-  /* 
-    display: flex: Los botones uno al lado del otro.
-    gap: 15px: Espacio entre los botones.
-    justify-content: center: Centrados horizontalmente.
-  */
-}
-
-/*
-  .logout-yes: Botón "Sí" (confirmar cerrar sesión).
-*/
-
-.logout-yes {
-  background-color: #FF8C00;
-  color: white;
-  border: none;
-  padding: 12px 30px;
-  border-radius: 6px;
-  font-size: 16px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  /* 
-    background-color: #FF8C00: Naranja.
-    color: white: Texto blanco.
-    border: none: Sin borde.
-    padding: 12px 30px: Espacio interno.
-    border-radius: 6px: Esquinas redondeadas.
-    font-size: 16px: Texto grande.
-    font-weight: bold: Texto en negrita.
-    cursor: pointer: Cursor de mano.
-    transition: background-color 0.3s ease: Animación suave.
-  */
-}
-
-/*
-  .logout-yes:hover: Botón "Sí" al pasar mouse.
-*/
-
-.logout-yes:hover {
-  background-color: #E67E00;
-  /* 
-    background-color: #E67E00: Naranja más oscuro.
-  */
-}
-
-/*
-  .logout-no: Botón "No" (cancelar).
-*/
-
-.logout-no {
-  background-color: #808080;
-  color: white;
-  border: none;
-  padding: 12px 30px;
-  border-radius: 6px;
-  font-size: 16px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  /* 
-    background-color: #808080: Gris.
-    color: white: Texto blanco.
-    border: none: Sin borde.
-    padding: 12px 30px: Espacio interno.
-    border-radius: 6px: Esquinas redondeadas.
-    font-size: 16px: Texto grande.
-    font-weight: bold: Texto en negrita.
-    cursor: pointer: Cursor de mano.
-    transition: background-color 0.3s ease: Animación suave.
-  */
-}
-
-/*
-  .logout-no:hover: Botón "No" al pasar mouse.
-*/
-
-.logout-no:hover {
-  background-color: #666666;
-  /* 
-    background-color: #666666: Gris más oscuro.
-  */
-}
+  input:focus: Se
