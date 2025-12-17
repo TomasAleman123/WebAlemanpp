@@ -15,7 +15,13 @@ document.addEventListener('DOMContentLoaded', function() {
   
   const registerForm = document.getElementById('registerForm');
   const registerScreen = document.getElementById('registerScreen');
-  const dashboardScreen = document.getElementById('dashboardScreen');
+  // Crear div para mensajes de error
+  const errorDiv = document.createElement('div');
+  errorDiv.className = 'form-message';
+  errorDiv.style.color = '#c62828';
+  errorDiv.style.marginBottom = '16px';
+  errorDiv.style.textAlign = 'center';
+  registerForm.insertBefore(errorDiv, registerForm.firstChild);
   
   
   // ===========================================
@@ -33,59 +39,28 @@ document.addEventListener('DOMContentLoaded', function() {
     const username = document.getElementById('registerUsername').value;
     const password = document.getElementById('registerPassword').value;
     const confirmPassword = document.getElementById('confirmPassword').value;
-    
-    
-    // ===========================================
-    // PASO 1: VALIDAR QUE LOS CAMPOS NO ESTÉN VACÍOS
-    // ===========================================
-    
+    errorDiv.textContent = '';
     if (email === '' || username === '' || password === '' || confirmPassword === '') {
-      alert('Por favor, rellena todos los campos');
+      errorDiv.textContent = 'Por favor, rellena todos los campos';
       return;
     }
-    
-    
-    // ===========================================
-    // PASO 2: VALIDAR QUE EL EMAIL TENGA FORMATO CORRECTO
-    // ===========================================
-    
     const expresionRegular = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    
     if (!expresionRegular.test(email)) {
-      alert('Por favor, ingresa un correo electrónico válido');
+      errorDiv.textContent = 'Por favor, ingresa un correo electrónico válido';
       return;
     }
-    
-    
-    // ===========================================
-    // PASO 3: VALIDAR QUE LA CONTRASEÑA TENGA LONGITUD MÍNIMA
-    // ===========================================
-    
     if (password.length < 6) {
-      alert('La contraseña debe tener al menos 6 caracteres');
+      errorDiv.textContent = 'La contraseña debe tener al menos 6 caracteres';
       return;
     }
-    
-    
-    // ===========================================
-    // PASO 4: VALIDAR QUE LAS CONTRASEÑAS COINCIDAN
-    // ===========================================
-    
     if (password !== confirmPassword) {
-      alert('Las contraseñas no coinciden. Intenta de nuevo');
+      errorDiv.textContent = 'Las contraseñas no coinciden. Intenta de nuevo';
       return;
     }
-    
-    
-    // ===========================================
-    // PASO 5: VALIDAR QUE EL USUARIO NO EXISTA
-    // ===========================================
-    
     const usuarios = obtenerUsuarios();
     const usuarioExiste = usuarios.some(u => u.email === email || u.username === username);
-    
     if (usuarioExiste) {
-      alert('Este email o nombre de usuario ya está registrado');
+      errorDiv.textContent = 'Este email o nombre de usuario ya está registrado';
       return;
     }
     

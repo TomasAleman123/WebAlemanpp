@@ -14,8 +14,13 @@ document.addEventListener('DOMContentLoaded', function() {
   
   const loginForm = document.getElementById('loginForm');
   const loginScreen = document.getElementById('loginScreen');
-  const dashboardScreen = document.getElementById('dashboardScreen');
-  const welcomeMessage = document.getElementById('welcomeMessage');
+  // Crear div para mensajes de error
+  const errorDiv = document.createElement('div');
+  errorDiv.className = 'form-message';
+  errorDiv.style.color = '#c62828';
+  errorDiv.style.marginBottom = '16px';
+  errorDiv.style.textAlign = 'center';
+  loginForm.insertBefore(errorDiv, loginForm.firstChild);
   
   
   // ===========================================
@@ -31,14 +36,9 @@ document.addEventListener('DOMContentLoaded', function() {
     
     const emailOUsuario = document.getElementById('email').value;
     const password = document.getElementById('password').value;
-    
-    
-    // ===========================================
-    // PASO 1: VALIDAR QUE LOS CAMPOS NO ESTÉN VACÍOS
-    // ===========================================
-    
+    errorDiv.textContent = '';
     if (emailOUsuario === '' || password === '') {
-      alert('Por favor, rellena todos los campos');
+      errorDiv.textContent = 'Por favor, rellena todos los campos';
       return;
     }
     
@@ -61,26 +61,18 @@ document.addEventListener('DOMContentLoaded', function() {
     // ===========================================
     
     if (usuarioEncontrado) {
-      // Login exitoso: colocar mensaje en el header y mostrar main en blanco
       const appHeader = document.getElementById('appHeader');
       const headerWelcome = document.getElementById('headerWelcome');
       const mainContent = document.getElementById('mainContent');
-
       if (headerWelcome) {
         headerWelcome.textContent = '¡Bienvenido ' + usuarioEncontrado.username + '!';
       }
-
-      // Limpiamos el formulario
       loginForm.reset();
-
-      // Ocultamos pantalla de login y mostramos header + main
       loginScreen.style.display = 'none';
       if (appHeader) appHeader.style.display = 'flex';
       if (mainContent) mainContent.style.display = 'block';
-
     } else {
-      // Usuario o contraseña incorrectos
-      alert('Email/Usuario o contraseña incorrectos. Intenta de nuevo.');
+      errorDiv.textContent = 'Email/Usuario o contraseña incorrectos. Intenta de nuevo.';
     }
   });
   
