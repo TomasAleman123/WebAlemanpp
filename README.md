@@ -1,24 +1,36 @@
 # Web-Alemanpp
 Web Alemanpp
 
-Web Alemanpp es una aplicación web diseñada para ofrecer un sistema de autenticación simple, claro y confiable. Permite a los usuarios registrarse, iniciar sesión y cerrar sesión de manera segura, brindando una experiencia fluida y organizada.
+Web Alemanpp es una aplicación web que implementa un sistema de autenticación básico, permitiendo a los usuarios registrarse, iniciar sesión y cerrar sesión de forma segura. El proyecto está enfocado en ofrecer una experiencia simple, ordenada y fácil de usar, con una estructura clara tanto a nivel visual como técnico.
 
-La plataforma cuenta con un flujo intuitivo que facilita la creación de cuentas nuevas, el acceso mediante credenciales válidas y el mantenimiento de la sesión activa mientras el usuario navega. Además, incorpora un cierre de sesión seguro para proteger la información del usuario.
+Funcionalidades :
 
-Experiencia de usuario y diseño
+Registro de usuarios mediante formulario.
 
-El diseño de Web Alemanpp se basa en una estética minimalista y moderna, utilizando una paleta de colores gris y blanco que aporta claridad, profesionalismo y una lectura cómoda en todas las pantallas. Las vistas están organizadas de forma clara para que la navegación resulte simple y accesible.
+Inicio de sesión con validación de credenciales.
 
-Aspectos técnicos
+Mantenimiento de sesión activa durante la navegación.
 
-La aplicación está estructurada mediante pantallas y componentes bien definidos, con una gestión básica de sesiones y validación de usuarios. El código se encuentra ordenado y comentado, lo que permite un mantenimiento sencillo y la posibilidad de escalar o agregar nuevas funcionalidades en el futuro.
+Cierre de sesión seguro.
 
-Estructura del sistema
+Interfaz organizada y accesible.
 
-/pantallas: contiene las distintas vistas de la aplicación.
+Diseño y estética :
 
-/documentación: incluye información y archivos relacionados con el desarrollo.
+La aplicación utiliza una paleta de colores gris y blanco, logrando un diseño minimalista, moderno y profesional. La interfaz prioriza la claridad visual y la facilidad de lectura.
 
-Finalidad
+Características técnicas :
 
-Web Alemanpp busca ofrecer una solución funcional y clara que combine diseño, lógica y buenas prácticas de desarrollo web, priorizando la simplicidad, la organización y la experiencia del usuario. El nombre refleja la identidad del proyecto y su enfoque personal.
+Arquitectura basada en pantallas y componentes.
+
+Manejo básico de sesiones y validación de usuarios.
+
+Código ordenado y comentado para facilitar el mantenimiento y futuras mejoras.
+
+Estructura de carpetas
+/pantallas        # Vistas principales de la aplicación
+/documentación    # Archivos y material relacionado con el desarrollo
+
+Objetivo
+
+Web Alemanpp ofrece una base sólida para sistemas de autenticación web, integrando buenas prácticas de desarrollo, diseño limpio y lógica clara, con posibilidad de ampliarse en el futuro.
