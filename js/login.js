@@ -61,6 +61,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // ===========================================
     
     if (usuarioEncontrado) {
+      setUsuarioLogueado(usuarioEncontrado);
       const appHeader = document.getElementById('appHeader');
       const headerWelcome = document.getElementById('headerWelcome');
       const mainContent = document.getElementById('mainContent');
@@ -71,6 +72,8 @@ document.addEventListener('DOMContentLoaded', function() {
       loginScreen.style.display = 'none';
       if (appHeader) appHeader.style.display = 'flex';
       if (mainContent) mainContent.style.display = 'block';
+      // Asignar handler de logout cada vez que se muestra el main
+      if (window.assignLogoutHandler) window.assignLogoutHandler();
     } else {
       errorDiv.textContent = 'Email/Usuario o contraseña incorrectos. Intenta de nuevo.';
     }
@@ -87,3 +90,35 @@ document.addEventListener('DOMContentLoaded', function() {
   
   (O registra un nuevo usuario para pruebas)
 */
+
+// Guardar usuario logueado en localStorage
+function setUsuarioLogueado(usuario) {
+  localStorage.setItem('usuarioLogueado', JSON.stringify(usuario));
+}
+
+// Obtener usuario logueado
+function getUsuarioLogueado() {
+  const data = localStorage.getItem('usuarioLogueado');
+  return data ? JSON.parse(data) : null;
+}
+
+// Restaurar sesión si existe
+(function restaurarSesion() {
+  const usuario = getUsuarioLogueado();
+  if (usuario) {
+    const appHeader = document.getElementById('appHeader');
+    const headerWelcome = document.getElementById('headerWelcome');
+    const mainContent = document.getElementById('mainContent');
+    if (headerWelcome) headerWelcome.textContent = '¡Bienvenido ' + usuario.username + '!';
+    if (appHeader) appHeader.style.display = 'flex';
+    if (mainContent) mainContent.style.display = 'block';
+    if (window.assignLogoutHandler) window.assignLogoutHandler();
+    // Oculta pantallas de login/registro/bienvenida
+    const loginScreen = document.getElementById('loginScreen');
+    const registerScreen = document.getElementById('registerScreen');
+    const welcomeScreen = document.getElementById('welcomeScreen');
+    if (loginScreen) loginScreen.style.display = 'none';
+    if (registerScreen) registerScreen.style.display = 'none';
+    if (welcomeScreen) welcomeScreen.style.display = 'none';
+  }
+})();

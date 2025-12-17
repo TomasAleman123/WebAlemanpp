@@ -97,7 +97,13 @@ document.addEventListener('DOMContentLoaded', function() {
     // Ocultamos la pantalla de registro y mostramos header + main
     registerScreen.style.display = 'none';
     if (appHeader) appHeader.style.display = 'flex';
-    if (mainContent) mainContent.style.display = 'block';
+    if (mainContent) {
+      mainContent.style.display = 'block';
+      // Asignar handler de logout cada vez que se muestra el main
+      if (window.assignLogoutHandler) window.assignLogoutHandler();
+    }
+    // Lanzar evento para asegurar handler de logout
+    window.dispatchEvent(new Event('registerSuccess'));
   });
   
 });

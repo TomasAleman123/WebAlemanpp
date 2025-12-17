@@ -27,8 +27,6 @@ document.addEventListener('DOMContentLoaded', function() {
   const backToChoice = document.getElementById('backToChoice');
   const backToChoice2 = document.getElementById('backToChoice2');
   const dashboardScreen = document.getElementById('dashboardScreen');
-  const logoutButton = document.getElementById('logoutButton');
-  const headerLogout = document.getElementById('headerLogout');
   const appHeader = document.getElementById('appHeader');
   const mainContent = document.getElementById('mainContent');
   const logoutModal = document.getElementById('logoutModal');
@@ -92,24 +90,26 @@ document.addEventListener('DOMContentLoaded', function() {
   // 6. DASHBOARD -> MODAL DE CONFIRMACIÓN
   // ===========================================
   
-  if (logoutButton) {
-    logoutButton.addEventListener('click', function() {
-      logoutModal.style.display = 'flex';
-    });
+  function assignLogoutHandler() {
+    const btn = document.getElementById('logoutMain');
+    if (btn) {
+      btn.onclick = function() {
+        if (logoutModal) logoutModal.style.display = 'flex';
+      };
+    }
   }
-
-  if (headerLogout) {
-    headerLogout.addEventListener('click', function() {
-      logoutModal.style.display = 'flex';
-    });
-  }
-  
+  // Asignar handler al cargar
+  assignLogoutHandler();
+  // Permitir que otros scripts lo llamen tras login/registro
+  window.assignLogoutHandler = assignLogoutHandler;
   
   // ===========================================
   // 7. MODAL: CONFIRMAR LOGOUT
   // ===========================================
   
   confirmLogout.addEventListener('click', function() {
+    // Limpiar usuario logueado
+    localStorage.removeItem('usuarioLogueado');
     logoutModal.style.display = 'none';
     // Ocultar vistas de usuario
     if (dashboardScreen) dashboardScreen.style.display = 'none';
@@ -117,6 +117,8 @@ document.addEventListener('DOMContentLoaded', function() {
     if (mainContent) mainContent.style.display = 'none';
     // Volver a la bienvenida
     welcomeScreen.style.display = 'flex';
+    // Reasignar handler por si el DOM se resetea
+    assignLogoutHandler();
   });
   
   
@@ -128,4 +130,6 @@ document.addEventListener('DOMContentLoaded', function() {
     logoutModal.style.display = 'none';
   });
   
+  // También asignar handler cada vez que se muestre el main tras login/registro
+  // (login.js y register.js deben llamar a esta función tras mostrar el main)
 });

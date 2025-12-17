@@ -1,40 +1,24 @@
 # Web-Alemanpp
 Web Alemanpp
 
-Web Alemanpp es una web app desarrollada como proyecto personal y educativo.
-El sitio permite a los usuarios registrarse, iniciar sesión y cerrar sesión, ofreciendo una experiencia simple, segura y funcional.
+Web Alemanpp es una aplicación web diseñada para ofrecer un sistema de autenticación simple, claro y confiable. Permite a los usuarios registrarse, iniciar sesión y cerrar sesión de manera segura, brindando una experiencia fluida y organizada.
 
-¿Qué hace la aplicación?
+La plataforma cuenta con un flujo intuitivo que facilita la creación de cuentas nuevas, el acceso mediante credenciales válidas y el mantenimiento de la sesión activa mientras el usuario navega. Además, incorpora un cierre de sesión seguro para proteger la información del usuario.
 
-Permite crear una cuenta nueva mediante un formulario de registro.
+Experiencia de usuario y diseño
 
-Permite iniciar sesión con credenciales válidas.
+El diseño de Web Alemanpp se basa en una estética minimalista y moderna, utilizando una paleta de colores gris y blanco que aporta claridad, profesionalismo y una lectura cómoda en todas las pantallas. Las vistas están organizadas de forma clara para que la navegación resulte simple y accesible.
 
-Mantiene la sesión activa mientras el usuario navega.
+Aspectos técnicos
 
-Permite cerrar sesión de forma segura.
+La aplicación está estructurada mediante pantallas y componentes bien definidos, con una gestión básica de sesiones y validación de usuarios. El código se encuentra ordenado y comentado, lo que permite un mantenimiento sencillo y la posibilidad de escalar o agregar nuevas funcionalidades en el futuro.
 
-Presenta pantallas organizadas con una estructura clara y accesible.
+Estructura del sistema
 
-Diseño y estética
+/pantallas: contiene las distintas vistas de la aplicación.
 
-La aplicación utiliza una paleta de colores gris y blanco, logrando una estética profesional, minimalista, moderna y fácil de leer.
+/documentación: incluye información y archivos relacionados con el desarrollo.
 
-Características técnicas
+Finalidad
 
-Arquitectura basada en pantallas y componentes.
-
-Manejo de sesiones y validación básica de usuarios.
-
-Estructura de carpetas organizada:
-
-/pantallas → contiene todas las vistas de la aplicación.
-
-/documentación → incluye material explicativo y archivos del desarrollo.
-
-Código ordenado y comentado para facilitar futuras mejoras.
-
-Objetivo del proyecto
-
-El propósito de Web Alemanpp es reforzar conocimientos pendientes, practicar lo aprendido durante el año y construir una aplicación que integre diseño, lógica y buenas prácticas.
-El nombre del proyecto surge de mi apellido y del objetivo académico del trabajo.
+Web Alemanpp busca ofrecer una solución funcional y clara que combine diseño, lógica y buenas prácticas de desarrollo web, priorizando la simplicidad, la organización y la experiencia del usuario. El nombre refleja la identidad del proyecto y su enfoque personal.
